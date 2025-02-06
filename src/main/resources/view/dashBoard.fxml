@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="parentPage" prefHeight="830.0" prefWidth="1310.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.DashBoardController">
+   <children>
+      <AnchorPane fx:id="MainButtnLayout" prefHeight="837.0" prefWidth="425.0" style="-fx-background-color: #a89e9e;">
+         <children>
+            <ImageView fitHeight="846.0" fitWidth="534.0" layoutY="-7.0" opacity="0.51" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/imae20.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="dashUserBtn" layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#navigateToUserPage" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="USER" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="dashCustBtn" layoutX="217.0" layoutY="17.0" mnemonicParsing="false" onAction="#navigateToCustomerPage" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="CUSTOMER" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="dashCustProBtn" layoutX="217.0" layoutY="116.0" mnemonicParsing="false" onAction="#navigateToCustomerProfile" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="CUSTOMER PROFILE" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="empBtn" layoutX="20.0" layoutY="116.0" mnemonicParsing="false" onAction="#navigateToEmployee" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="EMPLOYEE" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="serviceBtn" layoutX="20.0" layoutY="217.0" mnemonicParsing="false" onAction="#navigateToService" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="SERVICES" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="supplierBtn" layoutX="20.0" layoutY="323.0" mnemonicParsing="false" onAction="#navigateToSupplier" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="SUPPLIER" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="performBtn" layoutX="20.0" layoutY="422.0" mnemonicParsing="false" onAction="#navigateToPerformance" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="PERFORMANCE" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="reportBtn" layoutX="20.0" layoutY="523.0" mnemonicParsing="false" onAction="#navigateToReport" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="REPORT" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="appoinBtn" layoutX="216.0" layoutY="222.0" mnemonicParsing="false" onAction="#navigateToAppointment" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="APPOINTMENT" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="21.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="transBtn" layoutX="217.0" layoutY="323.0" mnemonicParsing="false" onAction="#navigateToTransaction" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="TRANSACTION" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="packBtn" layoutX="217.0" layoutY="523.0" mnemonicParsing="false" onAction="#navigateToPackage" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="PACKAGE" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="inventBtn" layoutX="216.0" layoutY="422.0" mnemonicParsing="false" onAction="#navigateToInventory" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="INVENTORY" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="designBtn" layoutX="20.0" layoutY="617.0" mnemonicParsing="false" onAction="#navigateToDesign" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="DESIGNS" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="servCatBtn" layoutX="217.0" layoutY="617.0" mnemonicParsing="false" onAction="#navigateToserviceCatalog" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="SERVICE CATALOG" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="18.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="logoutBtn" layoutX="20.0" layoutY="717.0" mnemonicParsing="false" onAction="#navigateToLogOutPage" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="LOGOUT" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button fx:id="dashBtn" layoutX="217.0" layoutY="717.0" mnemonicParsing="false" onAction="#navigateToDashboard" prefHeight="73.0" prefWidth="172.0" style="-fx-background-color: #800080;" text="DASHBOARD" textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="MainLayout" layoutX="420.0" layoutY="-1.0" prefHeight="830.0" prefWidth="888.0">
+         <children>
+            <ImageView fitHeight="863.0" fitWidth="762.0" layoutX="-11.0" layoutY="-25.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/nailbeauty2.jpg" />
+               </image>
+            </ImageView>
+            <AnchorPane fx:id="DashBoardLayer" layoutX="664.0" prefHeight="830.0" prefWidth="250.0" style="-fx-background-color: #8B008B;">
+               <children>
+                  <ImageView fitHeight="210.0" fitWidth="322.0" layoutY="-12.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/glitz.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="289.0" fitWidth="280.0" layoutX="1.0" layoutY="163.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/glitz2.jpg" />
+                     </image>
+                  </ImageView>
+                  <ImageView fitHeight="426.0" fitWidth="313.0" layoutX="-3.0" layoutY="412.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/image3.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </AnchorPane>
+            <Label layoutX="256.0" layoutY="14.0" prefHeight="106.0" prefWidth="335.0" text="WELCOME " textFill="WHITE">
+               <font>
+                  <Font name="Dyuthi Regular" size="64.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="143.0" fitWidth="104.0" layoutX="14.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/opalglitzlogonew.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
