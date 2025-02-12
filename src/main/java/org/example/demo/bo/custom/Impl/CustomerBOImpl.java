@@ -27,6 +27,7 @@ public class CustomerBOImpl implements CustomerBO {
         return customerDAO.update(new Customer(customer.getId(),customer.getName(),customer.getPhone(),customer.getEmail()));
     }
 
+
     @Override
     public ArrayList<CustomerDTO> getAllCustomers() throws SQLException, ClassNotFoundException {
         ArrayList<CustomerDTO> customers = new ArrayList<>();

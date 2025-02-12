@@ -9,12 +9,10 @@ import lombok.*;
 
 
 public class User {
+    private String id;
     private String name;
-    private int id;
     private String email;
     private String role;
     private String password;
 
-    public User(String userName, String userId, String email, String role, String password) {
-    }
 }

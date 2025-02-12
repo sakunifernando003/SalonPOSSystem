@@ -13,7 +13,6 @@ import org.example.demo.bo.custom.EmployeeBO;
 import org.example.demo.dto.EmployeeDTO;
 import org.example.demo.dto.tm.EmployeeTM;
 
-
 import java.net.URL;
 import java.sql.SQLException;
 import java.util.ArrayList;
@@ -21,6 +20,7 @@ import java.util.Optional;
 import java.util.ResourceBundle;
 
 public class EmployeeController implements Initializable {
+    EmployeeBO employeeBO = (EmployeeBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.Employee);
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         nameColm.setCellValueFactory(new PropertyValueFactory<>("name"));
@@ -38,7 +38,7 @@ public class EmployeeController implements Initializable {
         }
     }
 
-    private void refreshPage() throws SQLException {
+    private void refreshPage() throws SQLException, ClassNotFoundException {
         loadNextEmployeeId();
         loadTableData();
 
@@ -54,9 +54,9 @@ public class EmployeeController implements Initializable {
         specialTxt.setText("");
 
     }
-    EmployeeBO employeeBO = (EmployeeBO) BOFactory.getBoFactory().getBO(BOFactory.BOTypes.Employee);
-
-    private void loadTableData() throws SQLException {
+    /*EmployeeModel employeeModel = new EmployeeModel();
+*/
+    private void loadTableData() throws SQLException, ClassNotFoundException {
         ArrayList<EmployeeDTO> employeeDTOS = employeeBO.getAllEmployees();
 
         ObservableList<EmployeeTM> employeeTMS = FXCollections.observableArrayList();
@@ -77,7 +77,7 @@ public class EmployeeController implements Initializable {
         empTbl.setItems(employeeTMS);
     }
 
-    private void loadNextEmployeeId() throws SQLException {
+    private void loadNextEmployeeId() throws SQLException, ClassNotFoundException {
         String nextEmployeeId = employeeBO.getNextEmployeeId();
         empIdLbl.setText(nextEmployeeId);
     }
@@ -131,13 +131,13 @@ public class EmployeeController implements Initializable {
     private Button updateBtn;
 
     @FXML
-    void delOnAction(ActionEvent event) throws SQLException {
+    void delOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
         EmployeeTM selectedEmployee = empTbl.getSelectionModel().getSelectedItem();
         if (selectedEmployee == null) {
             new Alert(Alert.AlertType.WARNING, "Please select a employee to delete").show();
             return;
         }
-        int empId = selectedEmployee.getEmpId();
+        String empId = selectedEmployee.getEmpId();
 
         Alert alert = new Alert(Alert.AlertType.CONFIRMATION, "Are you sure you want to delete this employee?", ButtonType.YES, ButtonType.NO);
         Optional<ButtonType> optionalButtonType = alert.showAndWait();
@@ -174,8 +174,8 @@ public class EmployeeController implements Initializable {
     }
 
     @FXML
-    void saveOnAction(ActionEvent event) throws SQLException {
-        int empId = Integer.parseInt(empIdLbl.getText());
+    void saveOnAction(ActionEvent event) throws SQLException, ClassNotFoundException {
+        String empId =empIdLbl.getText();
         String name = empNameTxt.getText();
         String phone = phoneTxt.getText();
         String email = emailTxt.getText();
@@ -238,7 +238,7 @@ public class EmployeeController implements Initializable {
 
     @FXML
     void updateOnAction(ActionEvent event) {
-        int empId = Integer.parseInt(empIdLbl.getText());
+        String empId = empIdLbl.getText();
         String name = empNameTxt.getText();
         String phone = phoneTxt.getText();
         String email = emailTxt.getText();

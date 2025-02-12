@@ -8,7 +8,7 @@ import lombok.*;
 
 
 public class EmployeeTM {
-    private int empId;
+    private String empId;
     private String name;
     private String phone;
     private String email;

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="LogoutPage" prefHeight="830.0" prefWidth="1320.0" style="-fx-background-color: #8B008B;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.LogoutPageController">
+   <children>
+      <ImageView fitHeight="1030.0" fitWidth="1358.0" layoutX="-6.0" layoutY="-30.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/glitz.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="logagainBtn" layoutX="516.0" layoutY="257.0" mnemonicParsing="false" onAction="#logAgainOnAction" prefHeight="62.0" prefWidth="360.0" style="-fx-background-color: #8B008B;" text="login again" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="28.0" />
+         </font>
+      </Button>
+      <Label layoutX="445.0" layoutY="141.0" prefHeight="80.0" prefWidth="555.0" style="-fx-background-color: #00000;" text="LOGOUT SUCCESSFULL !!!" textFill="#26112c">
+         <font>
+            <Font name="Dyuthi Regular" size="48.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="14.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/opalglitzlogonew.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

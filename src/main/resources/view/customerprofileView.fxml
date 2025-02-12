@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="customerAnchPane" prefHeight="830.0" prefWidth="888.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.CustomerProfileController">
+   <children>
+      <ImageView fitHeight="688.0" fitWidth="1180.0" layoutX="1.0" opacity="0.59" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nail10pos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="265.0" layoutY="35.0" prefHeight="47.0" prefWidth="419.0" text="CUSTOMER PROFILE">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="118.0" prefHeight="41.0" prefWidth="135.0" text="Prof. ID         :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="167.0" prefHeight="41.0" prefWidth="208.0" text="Membership Status :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="455.0" layoutY="119.0" prefHeight="41.0" prefWidth="161.0" text="Customer ID    :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <TableView fx:id="custProfTbl" layoutX="14.0" layoutY="366.0" onMouseClicked="#onClickTbl" prefHeight="457.0" prefWidth="863.0">
+        <columns>
+          <TableColumn fx:id="profIdColm" prefWidth="90.0" text="profile ID" />
+          <TableColumn fx:id="custIdColm" prefWidth="123.0" text="customer ID" />
+            <TableColumn fx:id="memberStatColm" prefWidth="158.0" text="membership status" />
+            <TableColumn fx:id="appoCount" prefWidth="157.0" text="appointment count" />
+            <TableColumn fx:id="loyalPointColm" prefWidth="114.0" text="loyalty points" />
+            <TableColumn fx:id="specialNeedColm" prefWidth="220.0" text="special needs" />
+        </columns>
+      </TableView>
+      <Button fx:id="saveBtn" layoutX="411.0" layoutY="303.0" mnemonicParsing="false" onAction="#saveOnAAction" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #8B008B;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateBtn" layoutX="567.0" layoutY="303.0" mnemonicParsing="false" onAction="#updateOnAction" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #8B008B;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deltBtn" layoutX="723.0" layoutY="303.0" mnemonicParsing="false" onAction="#delOnAction" prefHeight="41.0" prefWidth="135.0" style="-fx-background-color: #8B008B;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <ImageView fitHeight="81.0" fitWidth="79.0" layoutX="796.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/opalglitzlogonew.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="proNumLbl" layoutX="181.0" layoutY="125.0" prefHeight="30.0" prefWidth="208.0" text="1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font></Label>
+      <ComboBox fx:id="combCustId" layoutX="617.0" layoutY="121.0" onAction="#combCustOnAction" prefHeight="30.0" prefWidth="191.0" style="-fx-background-color: #FFFFFF;" />
+      <ComboBox fx:id="CombMemberStatus" layoutX="229.0" layoutY="170.0" onAction="#combstatusOnAction" prefHeight="30.0" prefWidth="191.0" style="-fx-background-color: #FFFFFF;" />
+      <Label layoutX="457.0" layoutY="167.0" prefHeight="41.0" prefWidth="219.0" text="Appointment Count  :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="208.0" prefHeight="41.0" prefWidth="169.0" text="Loualty Points  :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="457.0" layoutY="214.0" prefHeight="30.0" prefWidth="177.0" text="Special Needs :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <TextArea fx:id="specialNeedTxt" layoutX="617.0" layoutY="215.0" prefHeight="41.0" prefWidth="241.0" promptText="text" />
+      <Button fx:id="reportBtn" layoutX="45.0" layoutY="303.0" mnemonicParsing="false" onAction="#reportOnAction" prefHeight="41.0" prefWidth="161.0" style="-fx-background-color: #FFFFFF;" text="Report" textFill="#7a2894">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Label fx:id="appoCountLbl" layoutX="676.0" layoutY="173.0" prefHeight="30.0" prefWidth="135.0" text="0">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="pointsLbl" layoutX="185.0" layoutY="214.0" prefHeight="30.0" prefWidth="161.0" text="00">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

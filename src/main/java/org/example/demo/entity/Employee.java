@@ -9,7 +9,7 @@ import lombok.*;
 
 
 public class Employee {
-    private int empId;
+    private String empId;
     private String name;
     private String phone;
     private String email;
