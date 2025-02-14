@@ -1,9 +1,6 @@
 package org.example.demo.dao;
 
-import org.example.demo.dao.custom.Impl.AppointmentDAOImpl;
-import org.example.demo.dao.custom.Impl.CustomerDAOImpl;
-import org.example.demo.dao.custom.Impl.EmployeeDAOImpl;
-import org.example.demo.dao.custom.Impl.UserDAOImpl;
+import org.example.demo.dao.custom.Impl.*;
 
 public class DAOFactory  {
     private static DAOFactory daoFactory;
@@ -15,7 +12,7 @@ public class DAOFactory  {
     }
 
     public enum DAOTypes{
-       EMPLOYEE, User, CUSTOMERPROFILE, APPOINTMENT, CUSTOMER
+       EMPLOYEE, User, CUSTOMERPROFILE, APPOINTMENT, SERVICE, CUSTOMER
     }
     public SuperDAO getDAO(DAOTypes daoTypes){
         switch (daoTypes){
@@ -28,6 +25,8 @@ public class DAOFactory  {
                 return new UserDAOImpl();
             case APPOINTMENT:
                 return new AppointmentDAOImpl();
+            case SERVICE:
+                return new ServiceDAOImpl();
             default:
                 return null;
         }

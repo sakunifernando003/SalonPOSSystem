@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="830.0" prefWidth="888.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.PackagesController
+">
+   <children>
+      <ImageView fitHeight="812.0" fitWidth="1069.0" opacity="0.61" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nail10pos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="366.0" prefHeight="80.0" prefWidth="398.0" text="PACKAGE DETAILS">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="94.0" prefHeight="38.0" prefWidth="136.0" text="Package ID :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="94.0" prefHeight="45.0" prefWidth="181.0" text="Package Name :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="157.0" prefHeight="38.0" prefWidth="136.0" text="Description :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="510.0" layoutY="216.0" prefHeight="38.0" prefWidth="109.0" text="Discount :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="48.0" layoutY="216.0" prefHeight="23.0" prefWidth="73.0" text="Price :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="packIDTxt" layoutX="177.0" layoutY="100.0" prefHeight="33.0" prefWidth="291.0" promptText="package ID" />
+      <TextField fx:id="packNameTxt" layoutX="672.0" layoutY="100.0" prefHeight="33.0" prefWidth="258.0" promptText="package name" />
+      <TextField fx:id="priceTxt" layoutX="129.0" layoutY="220.0" prefHeight="33.0" prefWidth="291.0" promptText="price" />
+      <TextField fx:id="discTxt" layoutX="619.0" layoutY="220.0" prefHeight="33.0" prefWidth="291.0" promptText="discount" />
+      <TextArea fx:id="descTxt" layoutX="176.0" layoutY="159.0" prefHeight="33.0" prefWidth="714.0" promptText="text" />
+      <Button fx:id="saveBtn" layoutX="375.0" layoutY="289.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: #8B008B;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveBtn1" layoutX="565.0" layoutY="289.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: #8B008B;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="saveBtn2" layoutX="748.0" layoutY="289.0" mnemonicParsing="false" prefHeight="45.0" prefWidth="162.0" style="-fx-background-color: #8B008B;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="packageTbl" layoutX="38.0" layoutY="364.0" prefHeight="450.0" prefWidth="901.0">
+        <columns>
+          <TableColumn prefWidth="92.0" text="ID" />
+          <TableColumn prefWidth="197.0" text="name" />
+            <TableColumn prefWidth="398.0" text="description" />
+            <TableColumn prefWidth="158.0" text="price" />
+            <TableColumn prefWidth="155.0" text="discount" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="80.0" fitWidth="85.0" layoutX="871.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/opalglitzlogonew.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

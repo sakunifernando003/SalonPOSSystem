@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="830.0" prefWidth="888.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.ReportController">
+   <children>
+      <ImageView fitHeight="688.0" fitWidth="921.0" layoutX="-1.0" opacity="0.64" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nail10pos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="311.0" layoutY="22.0" prefHeight="52.0" prefWidth="295.0" text="REPORT VIEW">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="30.0" layoutY="103.0" prefHeight="41.0" prefWidth="122.0" text="Rpeort ID :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="401.0" layoutY="103.0" prefHeight="41.0" prefWidth="87.0" text="Type :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="36.0" layoutY="178.0" prefHeight="41.0" prefWidth="87.0" text="Date :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="390.0" layoutY="172.0" prefHeight="41.0" prefWidth="137.0" text="Description :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <TextField layoutX="146.0" layoutY="107.0" prefHeight="34.0" prefWidth="222.0" promptText="report ID" />
+      <TextField layoutX="475.0" layoutY="107.0" prefHeight="34.0" prefWidth="378.0" promptText="inventory/report" />
+      <DatePicker layoutX="101.0" layoutY="182.0" prefHeight="34.0" prefWidth="247.0" promptText="date" />
+      <TextArea layoutX="527.0" layoutY="182.0" prefHeight="52.0" prefWidth="326.0" promptText="text" />
+      <Button layoutX="328.0" layoutY="274.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="155.0" style="-fx-background-color: #800080 #800080 #800080;" text="Save" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="509.0" layoutY="274.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="155.0" style="-fx-background-color: #800080 #800080 #800080;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="690.0" layoutY="274.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="155.0" style="-fx-background-color: #800080 #800080 #800080;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <TableView layoutX="25.0" layoutY="345.0" prefHeight="468.0" prefWidth="838.0">
+        <columns>
+          <TableColumn prefWidth="142.0" text="report ID" />
+          <TableColumn prefWidth="197.0" text="type" />
+            <TableColumn prefWidth="155.0" text="date" />
+            <TableColumn prefWidth="343.0" text="description" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="72.0" fitWidth="72.0" layoutX="796.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/opalglitzlogonew.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

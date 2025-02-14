@@ -1,10 +1,7 @@
 package org.example.demo.bo;
 
 
-import org.example.demo.bo.custom.Impl.AppointmentBOImpl;
-import org.example.demo.bo.custom.Impl.CustomerBOImpl;
-import org.example.demo.bo.custom.Impl.EmployeeBOImpl;
-import org.example.demo.bo.custom.Impl.UserBOImpl;
+import org.example.demo.bo.custom.Impl.*;
 
 public class BOFactory {
     private static BOFactory boFactory;
@@ -17,7 +14,7 @@ public class BOFactory {
 
     }
     public enum BOTypes{
-        Employee, User, CUSTOMERPROFILE, APPOINTMENT, CUSTOMER
+        Employee, User, CUSTOMERPROFILE, APPOINTMENT, SERVICE, CUSTOMER
     }
     public SuperBO getBO(BOTypes boTypes){
         switch (boTypes){
@@ -29,6 +26,10 @@ public class BOFactory {
                 return new UserBOImpl();
             case APPOINTMENT:
                 return new AppointmentBOImpl();
+            case CUSTOMERPROFILE:
+                return new CustomerBOImpl();
+            case SERVICE:
+                return new ServiceBOImpl();
 
 
             default:
