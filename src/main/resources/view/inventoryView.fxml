@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="830.0" prefWidth="888.0" style="-fx-background-color: #FFFFFF;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.demo.controller.InventoryController">
+   <children>
+      <ImageView fitHeight="736.0" fitWidth="1156.0" layoutX="-2.0" opacity="0.71" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/nail10pos.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="365.0" layoutY="14.0" prefHeight="54.0" prefWidth="272.0" text="INVENTORY">
+         <font>
+            <Font name="System Bold" size="36.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="105.0" prefHeight="41.0" prefWidth="127.0" text="Product ID :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="345.0" layoutY="105.0" prefHeight="41.0" prefWidth="127.0" text="Report ID :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="605.0" layoutY="105.0" prefHeight="36.0" prefWidth="150.0" text="Supplier ID :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="518.0" layoutY="159.0" prefHeight="41.0" prefWidth="119.0" text="Quantity :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="35.0" layoutY="159.0" prefHeight="41.0" prefWidth="173.0" text="Product Name :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <Label layoutX="34.0" layoutY="207.0" prefHeight="41.0" prefWidth="87.0" text="Price :">
+         <font>
+            <Font name="Dyuthi Regular" size="24.0" />
+         </font>
+      </Label>
+      <TextField fx:id="supIdTxt" layoutX="726.0" layoutY="110.0" prefHeight="29.0" prefWidth="150.0" promptText="supplier ID" />
+      <TextField fx:id="rptIdTxt" layoutX="455.0" layoutY="111.0" prefHeight="29.0" prefWidth="150.0" promptText="reportID" />
+      <TextField fx:id="invtIdTxt" layoutX="172.0" layoutY="110.0" prefHeight="29.0" prefWidth="163.0" promptText="inventory ID" />
+      <TextField fx:id="proNameTxt" layoutX="193.0" layoutY="165.0" prefHeight="29.0" prefWidth="319.0" promptText="product name" />
+      <TextField fx:id="qtyTxt" layoutX="628.0" layoutY="165.0" prefHeight="29.0" prefWidth="173.0" promptText="qty" />
+      <TextField fx:id="priceTxt" layoutX="107.0" layoutY="213.0" prefHeight="29.0" prefWidth="249.0" promptText="price" />
+      <Button fx:id="saveBtn" layoutX="345.0" layoutY="267.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-color: #800080;" text="Save " textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="updateBtn" layoutX="524.0" layoutY="267.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-color: #800080;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="deltBtn" layoutX="702.0" layoutY="267.0" mnemonicParsing="false" prefHeight="41.0" prefWidth="150.0" style="-fx-background-color: #800080;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="Dyuthi Regular" size="18.0" />
+         </font>
+      </Button>
+      <TableView fx:id="inventryTbl" layoutX="34.0" layoutY="340.0" prefHeight="463.0" prefWidth="827.0">
+        <columns>
+          <TableColumn fx:id="productColm" prefWidth="102.0" text="product ID" />
+          <TableColumn fx:id="reportColm" prefWidth="108.0" text="report ID" />
+            <TableColumn fx:id="suppIDColm" prefWidth="121.0" text="supp ID" />
+            <TableColumn fx:id="prodNameColm" prefWidth="240.0" text="product name" />
+            <TableColumn fx:id="priceColm" prefWidth="129.0" text="price" />
+            <TableColumn fx:id="qutyColm" prefWidth="126.0" text="quantity" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="69.0" fitWidth="87.0" layoutX="832.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/opalglitzlogonew.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
