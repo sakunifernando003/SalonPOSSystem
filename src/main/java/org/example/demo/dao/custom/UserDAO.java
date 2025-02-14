@@ -7,6 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 public interface UserDAO extends CrudDAO<User> {
+
+
+
     ArrayList<User> getAll() throws SQLException, ClassNotFoundException;
 
     String getNextId() throws SQLException, ClassNotFoundException;
@@ -16,4 +19,5 @@ public interface UserDAO extends CrudDAO<User> {
     boolean save(User user) throws SQLException, ClassNotFoundException;
 
 
+    boolean update(User user) throws SQLException, ClassNotFoundException;
 }

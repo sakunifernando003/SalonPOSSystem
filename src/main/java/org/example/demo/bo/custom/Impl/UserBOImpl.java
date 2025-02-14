@@ -37,7 +37,9 @@ public class UserBOImpl implements UserBO {
     }
 
     @Override
-    public boolean updateUser(UserDTO userDTO) {
-        return false;
+    public boolean updateUser(UserDTO user) throws SQLException, ClassNotFoundException {
+        return userDAO.update(new User(user.getName(),user.getId(),user.getEmail(),user.getRole(),user.getPassword()));
     }
+
+
 }
